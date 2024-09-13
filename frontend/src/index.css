@@ -1,0 +1,196 @@
+/* Reset some default styles */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif; /* More modern font */
+  line-height: 1.6;
+  background-color: #f5f5f5; /* Slightly off-white background for better contrast */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px; /* Increased padding for more space */
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px; /* Slightly wider container */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer and larger shadow */
+}
+
+.container > h1 {
+  margin-bottom: 24px;
+  font-size: 28px; /* Larger heading for better emphasis */
+  color: #333;
+  font-weight: 600; /* Slightly bolder heading */
+}
+
+.container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Increased gap for better spacing */
+}
+/* Style the select box */
+select {
+  width: 100%; /* Full width */
+  padding: 12px; /* Padding inside the select box */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  color: #333; /* Text color */
+  background-color: #fff; /* Background color */
+  outline: none; /* Remove default outline */
+  appearance: none; /* Remove default browser styling */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Style the select box when focused */
+select:focus {
+  border-color: #6c5ce7; /* Border color on focus */
+  box-shadow: 0 0 4px rgba(108, 92, 246, 0.3); /* Focus shadow */
+}
+
+/* Add a custom arrow to the select box */
+select::-ms-expand {
+  display: none; /* Remove default arrow in IE */
+}
+
+.select-wrapper {
+  position: relative; /* To position the custom arrow */
+}
+
+.select-wrapper::after {
+  content: '▼'; /* Custom arrow */
+  position: absolute;
+  right: 12px; /* Distance from the right */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #333; /* Arrow color */
+  pointer-events: none; /* Make sure the arrow doesn’t capture clicks */
+}
+
+/* Additional styling for select box when inside a container */
+.container select {
+  margin-bottom: 20px; /* Space below the select box */
+}
+
+label {
+  font-size: 16px; /* Smaller label size for a less dominant appearance */
+  color: #555;
+  margin-bottom: 8px; /* Increased space below labels */
+}
+
+.container input {
+  width: 100%;
+  font-size: 16px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px; /* Slightly larger border radius */
+  outline: none;
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.container input:focus {
+  border-color: #6c5ce7; /* Highlight border on focus */
+  box-shadow: 0 0 4px rgba(108, 92, 246, 0.3); /* Subtle focus shadow */
+}
+
+.container input::placeholder {
+  font-size: 14px;
+  color: #888;
+}
+
+button {
+  background-color: #6c5ce7; /* Modern color */
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 6px; /* Consistent rounded corners */
+  padding: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition on hover */
+}
+
+button:hover {
+  background-color: #5a4bdb;
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+button:active {
+  transform: scale(0.98); /* Slightly scale down on click */
+}
+
+.user-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expense-list {
+  font-family: 'Roboto', sans-serif;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0; /* Increased padding for better spacing */
+}
+
+.expense-description {
+  font-weight: 600; /* Bolder description for emphasis */
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 14px; /* Increased padding for a more prominent button */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px; /* Consistent rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition on hover */
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.delete-button:active {
+  transform: scale(0.98); /* Slightly scale down on click */
+}
+
+.amounts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.income-amount {
+  color: #27ae60;
+  font-weight: 600; /* Consistent boldness for emphasis */
+}
+
+.expense-amount {
+  color: #c0392b;
+  font-weight: 600; /* Consistent boldness for emphasis */
+}
