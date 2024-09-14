@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { handleError } from '../utils';
-
+import './ExpenseForm.css';
 function ExpenseForm({ addTransaction }) {
     const [expenseInfo, setExpenseInfo] = useState({
         amount: '',
